@@ -1,0 +1,71 @@
+---
+id: retrieve-agent
+title: "Retrieve Agent"
+description: "Retrieves details of a specific agent by ID."
+sidebar_label: "Retrieve Agent"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu4zYQ/RViXtoCsi27LhroLWi2bYBtG2Sd9sEwsow4sphIJENSWWsF/XtBSrIl2d40QZ9y0VzOmTkznAos3RqI1kC3KKyBTQAMTay5slwKiOAWreb4goYwtJRnhsiEUGIUxjzhMfF+5KEk11dTCEAq1NS5XjOIQLfO994KAlBU0xwtapezAkFzhKjJfc8ZBMBdTkVtCgFofC64RgaR1QUGYOIUcwpRBbZUzs9YzcUWAsi5+Ihia1OI5mEAOd31/xwSuhP8uUDCGQrLE46aJFITmyLpQOKO5ipDX5aXu+RpebN9XOWuNJbbzCW+9KSvGdRvjV5vHC+jpDAuQQWLMHQ/hlGa+F3BTRHHaExSZFlJupKyKblFW2hhfPRYOsi2TUPkwyPG1jUklsK6xFEFVKmMx747s0fjElW9mirtemd5A4uzk3UeFnZU9q46166R/1fR66BVyStoRnAOaP503mM8qxQJ40ZltCQuvBP1Hk1AcspFVnqMGpVGg8L6uhFVaCVd64aIrzT/+jVzeT7lVNvS427wvhf3ynmdwu3CDfCOsHxBalPUHsLAuwIqyr8SP3ljTMM0V155yAZpvjMde0IFIzFV9IFn3CtmiOBStDK0KbUkTjF+alTag7aHIIos82PREb/qQakDiDVSi+ye2lO1TKTO3Rdg1OLEct/rLtIvjSu5tEcM/0lRHKiRL9SQNtGIyyJc/DQJ55PFfLX4MVouo+UFbOo6AMoYd8FodtObnIRmBrvWQzOGg1W2Br/nRKNK2zS5x3G8ZQ5wHH1vyKW4L2wM0UlwY6avNiPww94fum7kerJuCXU+rgA9WG8P8A6U/4F7XTtgy3B5bqUKaUkiC8GmxI1S+4ohI5+7N+gzYRKNN8QdN9ZJcLlYHAf8m2acNUvhg9ZSv3/XNnve19Fibo4NMhkPvp4b495UcWFx6xp1WERAtaZlbzw+ygago5ib7anx6kz/QGPoFuEbW60z9cUgfnvV9bcnwfFqUrd2PfEfyttU9zyNZlmdTNaZ/L5a3RwFbMSymySoxcSwp8lWy0JN+jeJW2w9gxxtKlln0b3E3sYopE9ITem/TuQLas3ZyAx3FoXhUjTXzxOWEJ0BEMALzYoeENfbI4c+oIPHPmPf5xzAU26bAJrIEMEWm7vNvU4wo4rPGkCzqpuYGgIwqF+6o67QGUSQWqui2Wy++HkaTsPpPLoIL8KjsXcSzEjj7fNykUivrrZzv1JjL2+uHUzUpnEKp/Np6AShpLE59bPV9qS7Vkm3O0cP4H5C33rXtsqyuLMzlVHuh8YzrdrirIEqDsFBONH+rN0EkEpjnU1VPVCDdzqra/fv5wJ1CdF649qgOX1wpNcVMG7c72z/oJzl8f1tO1A/kNePrJMsurESZU8MELTK2ZPwmyRFylD31HsZx6hsX67jxTdQ028fVlDX/wICYDmk
+sidebar_class_name: "get api-method"
+info_path: docs/api/fastapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve Agent"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/agents/{agent_id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves details of a specific agent by ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"agent_id","in":"path","required":true,"schema":{"type":"string","minLength":10,"maxLength":10,"description":"Unique identifier for the agent","examples":["vUfk4PgjTm"],"title":"Agent Id"},"description":"Unique identifier for the agent"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Agent details successfully retrieved. Returns the complete agent object.","content":{"application/json":{"schema":{"properties":{"id":{"type":"string","maxLength":10,"minLength":10,"title":"Id","description":"Unique identifier for the agent","examples":["vUfk4PgjTm"]},"name":{"type":"string","maxLength":100,"minLength":1,"title":"Name","description":"The display name of the agent, mainly for representation purposes","examples":["Drizzle","Smarty"]},"type":{"type":"string","maxLength":100,"minLength":1,"title":"Type","description":"The type of the agent","examples":["weather"]},"description":{"anyOf":[{"type":"string","description":"Detailed of the agent's purpose and capabilities","examples":["An agent that checks the weather"]},{"type":"null"}],"title":"Description"},"created_at":{"type":"string","format":"date-time","title":"Created At","description":"When the agent was created","examples":["2025-01-21T23:44:48"]}},"additionalProperties":false,"type":"object","required":["id","name","type","created_at"],"title":"Agent","example":{"creation_utc":"2025-01-21T23:44:48","description":"An agent that checks the weather","id":"vUfk4PgjTm","name":"Drizzle","type":"weather"}},"example":{"id":"vUfk4PgjTm","name":"Drizzle","type":"weather","description":"An agent that checks the weather","creation_utc":"2025-01-21T23:44:48"}}}},"404":{"description":"Agent not found. The specified `agent_id` does not exist"},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"properties":{"detail":{"items":{"properties":{"loc":{"items":{"anyOf":[{"type":"string"},{"type":"integer"}]},"type":"array","title":"Location"},"msg":{"type":"string","title":"Message"},"type":{"type":"string","title":"Error Type"}},"type":"object","required":["loc","msg","type"],"title":"ValidationError"},"type":"array","title":"Detail"}},"type":"object","title":"HTTPValidationError"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,66 @@
+---
+id: list-agents
+title: "List Agents"
+description: "Retrieves a list of all agents in the system."
+sidebar_label: "List Agents"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNlk1v4zYQhv8KMZdeZFt2UzTQzWjaIkDQBlsHPThGMJFGFmOJZMiR11pD/70gZTuynEXa7WUv/hA5M8+8MxxxD4xrB8kScE2KHawiyMilVhqWWkECn4itpC05gaKUjoXOBZal6PYLqQQXJFzjmKrxo3pUn4hrq5xAJagy3HRWMhdKH41oJx2PH9W8+4uWhA1WlHmHSot1jRYVE2VC24zsGCLQhix6qtsMEvBenw7QEVhyRitHDpI9zOLYf53ncfcBO0SQasWk2NuiMaVMQ7TJi/MO9uDSgir0v4z1LCy7cBlyeCqZKne5LDP/yY0hSMCxlWoNEVS4uyO15gKSaRxBJVX/L0su/fbbDIb1eFDytSYhM1Isc0lW5NqGPEJWEAHtsDIlhapuH/LN1f36ZVHBqo1AYUUf0gxw3mj+8NZDnkVBIpPOlNgI795rfKKJRIVSlU1gtGQsOVIcZBWmtkb7ip0T31j55Uvp4/xVoeUmcHe838q98FbvcXt3Z7wDls+EXJANCGfWe0DV/JlDsrxkOg9zQ4yy9G3cC/ODO2YvUGUiRYPPspShY84J5qqzEFwgi7SgdOOCnx7aCUHVZQnt6i3xmx5KG0FqCZmyJ+T3tMy1rfyK72casQy1Pnr6pTMVc77I8O+C1Ftq4jM6cQg0yGUWz34axdPRbLqY/ZhcXSVX17Bq2wgwy6R3huV97+TkWDo6lh708wulHE76ay0tZd6j9CFU15XcFbmXY0+I+Xlxffpho9TqqeYUknfhhpl+WIwoHPb+oTseuV5bHxI62rSn9ga0Fpue6Dd+sPwvgcJoGurgzoXoxtfyO1IkNMV7hP/d1zcA/wsZPGHrIXejnKwauWwzWltdm9GB5/Re6m2oiAudHXf411dYd4ZwQ+iasDLSW7JWZr0ttGNSTmrlggYbaiD5SuAItljWPQA/HC4M+iBvFiFaf//XwIYmqwg6j5DAmjyxQT+AYYJGTk5KOLJbsl0OtS0hgYLZJJPJdPbzOB7H42lyHV/HFxW70ymWorMOwaTKdZhfh57+DR3P7289F1nXGcXj6Tj2I89oxxWGiX0QPtwDTudgMNVPN4Dv6Npz6GimHU9MiTKM8qDg/qD0EtBIiHpXuEI79s/3+2d09GDLtvWPX2uyDSTLla+hlfjsBVz6t1tBmJHtNdg8Tclwv6OGN6Kzwv/+6wLa9h+EQXvU
+sidebar_class_name: "get api-method"
+info_path: docs/api/fastapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List Agents"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/agents"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a list of all agents in the system.
+
+Returns an empty list if no agents exist.
+Agents are returned in no guaranteed order.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all agents in the system","content":{"application/json":{"schema":{"properties":{"data":{"items":{"properties":{"id":{"type":"string","maxLength":10,"minLength":10,"title":"Id","description":"Unique identifier for the agent","examples":["vUfk4PgjTm"]},"name":{"type":"string","maxLength":100,"minLength":1,"title":"Name","description":"The display name of the agent, mainly for representation purposes","examples":["Drizzle","Smarty"]},"type":{"type":"string","maxLength":100,"minLength":1,"title":"Type","description":"The type of the agent","examples":["weather"]},"description":{"anyOf":[{"type":"string","description":"Detailed of the agent's purpose and capabilities","examples":["An agent that checks the weather"]},{"type":"null"}],"title":"Description"},"created_at":{"type":"string","format":"date-time","title":"Created At","description":"When the agent was created","examples":["2025-01-21T23:44:48"]}},"additionalProperties":false,"type":"object","required":["id","name","type","created_at"],"title":"Agent","example":{"creation_utc":"2025-01-21T23:44:48","description":"An agent that checks the weather","id":"vUfk4PgjTm","name":"Drizzle","type":"weather"}},"type":"array","title":"Data"}},"additionalProperties":false,"type":"object","required":["data"],"title":"Agents","example":{"data":[{"creation_utc":"2025-01-21T23:44:48","description":"An agent that checks the weather","id":"vUfk4PgjTm","name":"Drizzle","type":"weather"}]}},"example":{"data":[{"id":"vUfk4PgjTm","name":"Drizzle","type":"weather","description":"An agent that checks the weather","creation_utc":"2025-01-21T23:44:48"}]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

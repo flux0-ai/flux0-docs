@@ -1,0 +1,19 @@
+python:
+  label: Python
+  permalink: /python
+  description: Python
+
+semantic-release:
+  label: Semantic Release
+  permalink: /semantic-release
+  description: Semantic Release
+
+uv:
+  label: Uv
+  permalink: /uv
+  description: Uv package manager
+
+monorepo:
+  label: Monorepo
+  permalink: /monorepo
+  description: Monorepo

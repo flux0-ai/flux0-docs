@@ -1,0 +1,73 @@
+---
+id: list-sessions
+title: "List Sessions"
+description: "Retrieve all sessions that match the given filters."
+sidebar_label: "List Sessions"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV21v2zYQ/ivEfZYd2XWQVt+CtekCZGiwOhvQNAho8STRoSiVpJy4hv/7cJQU0y/xluXD9sUvIu/uueeeO1IrcDy3kNyCRWtlpS3cRSDQpkbWTlYaEvgdnZG4QMaVYv025gruWMldWjBXIMvlAjXLpHJo7PC7/q4v2t8s5ZrNkPG6VhIFa6zUOeM5ancvxZBdZkxXvSHjBpmtMZWZRBFtR3yUSpEng64xGsUQIqhqNJxwXgpIQEnr7p8TiaDmhpdIjiG5XYHmJUICfWyIQFJ+Pxo0S4jA4I9GGhSQZFxZjMCmBZYckhVwvfySeR9uWZMP64zUOexSdaPljwaZFKgdpWBYlXl6fEyIAJ94WSv0jLvTRk3mn7/NZ3C3jp5d60YpWN9F4KRT9OCcbNmlgDU9NWjrSltysYJxHNPXNograR3FJfJ8gYjwgJW00o7QUF5UlNQTeDK3ZL0Ksq4N0etkG0tw559Kh6XdX5aCPnfpKfnTFercFZCM4ghKqcO/fYaX4p8z2SWyw+XPxbtiMj+9mC+Iy02J/zWkZ9JfV2LGra1SyR0K9ihdEUIe7mBe3GQPk+t8Pi095saieRPkG4vmVYgp4qsAf6jz02/EtAfcxT3WHQHwcRzvAvvY/1sg886O1/icOa6Q8VnVOMZZZiRqoZZMGJ5XmnEtGGeqso7VRuoUrT3eV1P/vfYNYZvSo7qvssyiO6DvVMm+aXbTldphjgZ8ZWTZlJDs5TotkJWEzWBKOsEFfbbRWG0qgouCzZaegC7YVv7vzqJRHB/N6JfWbE0dIISk0FxdB2l0g62zr2ZzTCnKs/2GiC8dD3t5GJ4+2LZKjjtfshKt5TmygMdAOiF5784IW2qQ9HbP3SGxZ5UpaYUGDg6cLDFE2Jqyc7eH7M8Cdage9sgt60LtKGkcj08H8WgwPp2Ox8lklExGcPdq1jbnxS340yQ4WPpmPiyuLQqC+n3d1b2X2/MsCyfGNoubjD5M4w/J+CyZjL7R+UZWwWwMxF8ge0TuCjRMavb1IgCdhJ1OtHSZc2P4MvDxkU6EN9Hmz5R9Auw2A+3Jc/vfU+E1cgjYvvOXoB50fBzL32dHwAjaZDzevw78wZUU/ohnn4ypzBtuAOi4VEfuAKpKt1ZfOhiCGdbPzvXdyzq7qlqANKtLmx8aGv3W39pRBM/OXt7qyWBTWg00flCmlFcbutsXSHZDb8vukXZp6TsUrN/y63R6veewre3TIEOjB1Y8DHJTNfWgu80GF7tgS4muqES/h+7Fft3WyB+Q26VfGVQLNEaKYAs+OdStPyrbAy4heSF0BAuumi0IVNc9kxDKxsbHC/e/BG3X5C6C1iMkkKPzt3y6X8AJr+VJwIZFs+hv/o1RkEDhXJ2cnIzGZ8N4GA9Hyfv4fbx3jpDa6K2DrH04qbPKC6kr0gW37vz6kpChsa1RPBwNY6p9XVlXct9GHfn+Oh4Mtq1oq00v/q/fszrBOnxyJ7Xi0veiZ3XV8X8LvJae9s17ZFFZRyur1YxbvDFqvabH7QsX1UVIy2cqeOVq1RAcpH3xfSUW3EjaD8ktjYsCuUATCPU8TbF2gdXedNuSz+dPU1iv/wLFFxkA
+sidebar_class_name: "get api-method"
+info_path: docs/api/fastapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List Sessions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/sessions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve all sessions that match the given filters.
+
+Filters can be applied using agent_id. If no filters are specified, all sessions will be returned.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"agent_id","in":"query","required":false,"schema":{"anyOf":[{"type":"string","description":"Unique identifier of the agent","examples":["t5ul4jGZjb"]},{"type":"null"}],"title":"Agent Id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all matching sessions","content":{"application/json":{"schema":{"properties":{"data":{"items":{"properties":{"id":{"type":"string","maxLength":10,"minLength":10,"title":"Id","description":"Unique identifier of the session","examples":["zv3h4j5Fjv"]},"agent_id":{"type":"string","maxLength":10,"minLength":10,"title":"Agent Id","description":"Unique identifier of the agent associated with the session.","examples":["vUfk4PgjTm"]},"user_id":{"type":"string","maxLength":10,"minLength":10,"title":"User Id","description":"Unique identifier of the user associated with the session.","examples":["v9pg5Zv3h4"]},"title":{"anyOf":[{"type":"string","maxLength":200,"description":"Descriptive title of the session","examples":["A tale about a friendly dragon and a lost princess"]},{"type":"null"}],"title":"Title"},"consumption_offsets":{"properties":{"client":{"anyOf":[{"type":"integer","minimum":0,"description":"The most recent event offset processed by the client","examples":[37,100]},{"type":"null"}],"title":"Client"}},"additionalProperties":false,"type":"object","title":"ConsumptionOffsets","description":"Tracks the state of message consumption.","example":{"client":37}},"created_at":{"type":"string","format":"date-time","title":"Created At","description":"When the session was created","examples":["2025-01-25T22:41:41"]}},"additionalProperties":false,"type":"object","required":["id","agent_id","user_id","consumption_offsets","created_at"],"title":"Session","example":{"agent_id":"vUfk4PgjTm","created_at":"2025-01-29T09:27:41Z","id":"zv3h4j5Fjv","title":"The weather in SF","user_id":"v9pg5Zv3h4"}},"type":"array","title":"Data"}},"additionalProperties":false,"type":"object","required":["data"],"title":"Sessions","example":{"data":[{"agent_id":"vUfk4PgjTm","created_at":"2025-01-29T09:27:41Z","id":"zv3h4j5Fjv","title":"The weather in SF","user_id":"v9pg5Zv3h4"}]}},"example":{"data":[{"id":"zv3h4j5Fjv","agent_id":"vUfk4PgjTm","user_id":"v9pg5Zv3h4","title":"The weather in SF","created_at":"2025-01-29T09:27:41Z"}]}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"properties":{"detail":{"items":{"properties":{"loc":{"items":{"anyOf":[{"type":"string"},{"type":"integer"}]},"type":"array","title":"Location"},"msg":{"type":"string","title":"Message"},"type":{"type":"string","title":"Error Type"}},"type":"object","required":["loc","msg","type"],"title":"ValidationError"},"type":"array","title":"Detail"}},"type":"object","title":"HTTPValidationError"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

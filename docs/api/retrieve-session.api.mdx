@@ -1,0 +1,71 @@
+---
+id: retrieve-session
+title: "Retrieve Session"
+description: "Retrieve details of a session by its unique identifier"
+sidebar_label: "Retrieve Session"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/ivEfdoAOZYdB2n0LVibLUCHBq2zAQ2MgJFOEhOJVEjKjWvovw9HSTbll2xp9yWOLd7dc889d0etwfLMQHQHBo0RShpYBJCgibWorFASIviMVgtcIkvQclEYplLGWXeePayYsIbVUjzXyESC0opUoIYAVIWak5PrBCLQnZv7zhICqLjmJVrUhGANkpcIUY/kXiQQgCAEFbc5BKDxuRYaE4isrjEAE+dYcojWYFeVs7RayAwCKIX8iDKzOUSTMICSv/hfh+nd7iKn/GyObIsTX3hZFeh4+r48zWePZ1ePS2LKCltQ5C8dG9cJNG8O0CwoN1MpaSjGGqZhSB9DN32Ivgo9nwkzdRyjMWldFCsIIFbSorTkgVdVIWJXg/GjITdrj7VKU4WsaIOK5CCTQ+p2iO3Tv6ZS/W+0NgHwDKW9/xlIl+SBvQWYi8m4MSoW3GLCvgmb+5BPdjAvb9On2U32OC8d5tqg/inItwb1mxBTxDcBvqiys6/EtAPcxV0Dl6tPqWvBV4BPw73Wed9/WyJzzl6v8SWzvEDGH1RtGWepFiiTYsUSzTMlGZcJ46xQxrJKC0mSJpgbULIuCtcrPV9z99k4xZu6dKjuVZoatGZf33Eh+q7YTVdIi5kbWaWQoqxLiPZynefISsKmMSad4JL+ttFYpRXBxYTGIRHQBRvkf3oeTMLw1Yx+a80a6oAkERSaFzdeGikvDAa9vXp4xJiibOy3RHzqeNjLQ/P4ybRVsty6kpVoDM+QeTx60vHJOz0nbLFG0ts9t4fEnipd0hNIuMWRFSX6CFtTdmn3kP2do/TVw75xw7pQO0qahtOzUTgZTc/m02k0m0SzCSzezNp2n9yBWzabqbNt5sPiGlCwvwaG3G1nmT8xhixuM7qYhxfR9DyaTb7S+iMrbzZ64s+RfUNuc9RMSPblygMd+Z1OtHho9j0ew3fQ2+sA/j2lpiE8s3B2fMFJZVmqaulW6Ww63T/5Fy9E4rYa+6C10j++9Npl6nixWB6YGoWKB0+PjUqvq/tp0rgZ2/7GteYrj7yPqgVIKZYmO9RG/dE/2+aEjbPjRx0ZbE5Pm+Z1vVNebejunKfiLb0tu8fTeN/SdyhYf+SP+fxmz2GrgpdRilqOTPI0yrSqq9HwAkht5h0p0eYq6c/0tx93xlTIn5CblXs6UkvUWiQ7x/DFomz9UvmecAXREQgBLHlRD6BQffdMfEhbm01M3+YYxENmiwBazxBBhtZdlGkDw5hXYtxDGq+3F+UGAjCol/1NutYFRJBbW0Xj8WR6fhKehCeT6F34LtwbuyTFgrXWLraQqXIq6yp4xY29vLkmqKhNaxSeTE5CEkaljC2567GuMpvXhe0wHARcb3v1x18tOrVZfLHjquDCNZLLet2RdQe8Eo6WjZgi781iEUCujKVz6/UDN3iri6ahn59r1CuI7hZUGi34A5Fwt4ZEGPo/2ayTo1n98rlrtF/Zf7gFH0yl7ze58hQCQScnLw83ZHLkCWpP1pdxjJX1TPdm4kBkv3+YQ9P8A/AEyqg=
+sidebar_class_name: "get api-method"
+info_path: docs/api/fastapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve Session"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/sessions/{session_id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve details of a session by its unique identifier
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"session_id","in":"path","required":true,"schema":{"type":"string","minLength":10,"maxLength":10,"description":"Unique identifier of the session","examples":["zv3h4j5Fjv"],"title":"Session Id"},"description":"Unique identifier of the session"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Session details retrieved successfully","content":{"application/json":{"schema":{"properties":{"id":{"type":"string","maxLength":10,"minLength":10,"title":"Id","description":"Unique identifier of the session","examples":["zv3h4j5Fjv"]},"agent_id":{"type":"string","maxLength":10,"minLength":10,"title":"Agent Id","description":"Unique identifier of the agent associated with the session.","examples":["vUfk4PgjTm"]},"user_id":{"type":"string","maxLength":10,"minLength":10,"title":"User Id","description":"Unique identifier of the user associated with the session.","examples":["v9pg5Zv3h4"]},"title":{"anyOf":[{"type":"string","maxLength":200,"description":"Descriptive title of the session","examples":["A tale about a friendly dragon and a lost princess"]},{"type":"null"}],"title":"Title"},"consumption_offsets":{"properties":{"client":{"anyOf":[{"type":"integer","minimum":0,"description":"The most recent event offset processed by the client","examples":[37,100]},{"type":"null"}],"title":"Client"}},"additionalProperties":false,"type":"object","title":"ConsumptionOffsets","description":"Tracks the state of message consumption.","example":{"client":37}},"created_at":{"type":"string","format":"date-time","title":"Created At","description":"When the session was created","examples":["2025-01-25T22:41:41"]}},"additionalProperties":false,"type":"object","required":["id","agent_id","user_id","consumption_offsets","created_at"],"title":"Session","example":{"agent_id":"vUfk4PgjTm","created_at":"2025-01-29T09:27:41Z","id":"zv3h4j5Fjv","title":"The weather in SF","user_id":"v9pg5Zv3h4"}},"example":{"id":"zv3h4j5Fjv","agent_id":"vUfk4PgjTm","user_id":"v9pg5Zv3h4","title":"The weather in SF","created_at":"2025-01-29T09:27:41Z"}}}},"404":{"description":"Session not found"},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"properties":{"detail":{"items":{"properties":{"loc":{"items":{"anyOf":[{"type":"string"},{"type":"integer"}]},"type":"array","title":"Location"},"msg":{"type":"string","title":"Message"},"type":{"type":"string","title":"Error Type"}},"type":"object","required":["loc","msg","type"],"title":"ValidationError"},"type":"array","title":"Detail"}},"type":"object","title":"HTTPValidationError"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

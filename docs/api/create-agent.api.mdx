@@ -1,0 +1,71 @@
+---
+id: create-agent
+title: "Create Agent"
+description: "Creates a new agent with the specified parameters."
+sidebar_label: "Create Agent"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v4zYQ/SvEXHqRbdlN0UC3NGmBAIuusZu0B8MIJuLIYkKRDEnF9hr+7wtSsi3ZSTebRU+tL7Kk+XgzfPNIbcDjwkE2A1yQ8g7mCXByuRXGC60gg0tL6MkxZIqWLFqxpfAl8yUxZygXhSDODFqsyJN1Q0hAG7IYAlxzyCCPIe6iLyRg6akm53/TfA3ZBnKtfHiRbQCNkSKPjqMHF9JvwOUlVRj+GRvCekEu3CmsKFz92hBk4LwVagEJVLj6QGrhS8jGaZpAJdT+PgEvvAzmfwbv41JvSmJcOCNxzUJ4potYZQSesAqFkmtWaMssGUuOlI9Ymamt0Y4cJEArrIyk2NIrK758kSHP5wqtX8N8m7R434v7Jni9hDuE6+E9wrIk9CXZCKHnvQFU648FZLNTTP00V+RRSOK9ND+5XfUMFWc5GrwXUsRV6iO4UC17fIme5SXljy7G6UDbQ1C1lLCdHwq/6kDZbhNAzkW4QTnt0KJA6WjXY9D3D5TvGCcs8QBDNSsfTTrxLwK0yHWh1TSQuYM/dKnfi28Wk7QE7ZCgRbWz2G5DHQdo3tYUHzijlWtIPknHL+SOiZuh4szVeU7OFbWU64R9Il9b1UDZWTRAUWq1aCZXeMcWpMKIEmfXV2Fi3zmFgn+Ty30qp4eWX/MTit0q8VQTE5yUD7pi47S9xunn2+LxbLp4uKkirf9XhP+uIiTtJsPv0L/Uy0LbKrwBjp4GXjQa0Ea6bAflwp9U+HdJ6lAaW6LbjdVRLZN08ssgHQ8m45vJz9nZWXZ2DvMfEirBdyLS2vVqPJauvljlrZDd1T6H7EVwx5W+QdHCsHeH7i0a14P1/QHegfINtTfSezaZnIrrXygFb2aYrNWWCcXaA0vnjBMLWw0Ksmrg+ONgYXVtBm0x7UmqZ1CRLzXfWTTrGC2cIXwkdOv4bqCfyVrBe0a08qSc0MrFkXykNWSvJE/gGWXdAREG6MShC+bg0ebrerwG7tRpnkATFTIw2gU6GgxKBSM0YrRviSP7HPoXCqmthAxK7002Go0nvw7TYTocZ+fpeXqy7h90jpI13jFb2Jg+HQ6Sv/+bG3UCQhU6yko7cn+g8xfT69AIsq7JlA7HwzQYh/orVIdDaiswbDeoR2q733rfd9Zu0Xpa+ZGRKKIaxt5u2jWYARoBSeeIX4Ylymaw2dyjo1srt9vw+Kkmu4ZsNg8LbAXeh2JnYYMoCTnZDv8uG9CDdvvZ0+747HCg00Wek/H/aNtl0fTj5xtI4L79Sqh0HAqLyyCTuIQM4neGb+Zi0zzbgES1qHERbJuY4fcV48plQA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/fastapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Agent"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/agents"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new agent with the specified parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"properties":{"name":{"type":"string","maxLength":100,"minLength":1,"title":"Name","description":"The display name of the agent, mainly for representation purposes","examples":["Drizzle","Smarty"]},"type":{"type":"string","maxLength":100,"minLength":1,"title":"Type","description":"The type of the agent","examples":["weather"]},"description":{"anyOf":[{"type":"string","description":"Detailed of the agent's purpose and capabilities","examples":["An agent that checks the weather"]},{"type":"null"}],"title":"Description"}},"additionalProperties":false,"type":"object","required":["name","type"],"title":"AgentCreationParams","example":{"description":"An agent that checks the weather","name":"Drizzle","type":"weather"}}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Agent created successfully, Returns the created agent along with its generated ID.","content":{"application/json":{"schema":{"properties":{"id":{"type":"string","maxLength":10,"minLength":10,"title":"Id","description":"Unique identifier for the agent","examples":["vUfk4PgjTm"]},"name":{"type":"string","maxLength":100,"minLength":1,"title":"Name","description":"The display name of the agent, mainly for representation purposes","examples":["Drizzle","Smarty"]},"type":{"type":"string","maxLength":100,"minLength":1,"title":"Type","description":"The type of the agent","examples":["weather"]},"description":{"anyOf":[{"type":"string","description":"Detailed of the agent's purpose and capabilities","examples":["An agent that checks the weather"]},{"type":"null"}],"title":"Description"},"created_at":{"type":"string","format":"date-time","title":"Created At","description":"When the agent was created","examples":["2025-01-21T23:44:48"]}},"additionalProperties":false,"type":"object","required":["id","name","type","created_at"],"title":"Agent","example":{"creation_utc":"2025-01-21T23:44:48","description":"An agent that checks the weather","id":"vUfk4PgjTm","name":"Drizzle","type":"weather"}},"example":{"id":"vUfk4PgjTm","name":"Drizzle","type":"weather","description":"An agent that checks the weather","creation_utc":"2025-01-21T23:44:48"}}}},"422":{"description":"Validation error in request parameters"}}}
+>
+  
+</StatusCodes>
+
+
+      

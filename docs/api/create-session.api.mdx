@@ -1,0 +1,74 @@
+---
+id: create-session
+title: "Create a new session"
+description: "Create a new session bettween a user and an agent."
+sidebar_label: "Create a new session"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdWE1v2zgQ/SsEL3uRHdlNkFaXRbbdLgIUaNA6W6BpEIzFkcyEIlWSsuMa/u+LIWVLjpNssull60MMWfPxZvhmOJMV91A6nl1wh85Jox2/TLhAl1tZe2k0z/hbi+CRAdO4YK0Ym6L3C0TNgDUOLQMtGGgGJWo//Ka/6ckMt8ILqRSbIgPnTC7Bo2AL6WfMz5DV1sylQBFVgx0TPINSyygWXQy/6dOCaRP9SbfVTBiwskHn45uNszzAFkOecFOjBbJ5KnjG44urFhxPeA0WKvRoKRErrqFCnnFQyiyuSovopS55wiUl43uDdskTbvF7Iy0KnhWgHCbc5TOsgGcr7pc16U+NUQhkfzedp1rIHDw6JouQgRg4BYS2kp6y4w1zGDMqtfQSFOsBEVhAo/zWtZdekccTQsz+2giuf7bn9WWMG53/w4glxdqlwdsGE54b7VF7egV1rcidNPrg2hGAVS9JtaVD8RJdkCUgV1L00ue8jdFWcPsBdelnPBulCa+k7j9uYw+hnIq9dJ9r+b1BJgVqLwuJlpl+8PdRsmUGMQdvoaoVhgqZnxc3h2fl9aTil+uER7Sglx+LQJvn4X4iyI6kfSQ/5q9mh9dH76/nhGTrWjdKhUPaJOVUEAnapydiHad76N5tnubIgrHH0Z0wDwoZTE3jGbDCStRCLZmwUBodOwVTxnlWW6lzdO7xKCbhe71OOAghY2s469FnUwVR3UyvMfc7FXrR8atn9nMEH7qbNPqMmoDrQtmlZf/wOxNfZuB/cyEVCwQ/o76k2ef3v/M1fQiDq412keTjdERfu7ltUWy6FXNNThkpGqWWCfuEvrE6ethKtBqgjC4jaaV3rERNTQ4FO31HzP2PlfiSGnxO9T2F2P/LtkB30Isgn9Ml9hzE8f59BuA3dXn0lTIdAP8i7SEw3jVVQHVlisKhd/v8zpXcVMXdcKX2WKLl4WRk1VQ824uVppqKsFnMiSc4p7/RGw0kBBcFmy5jyUZnO/G/Ok5GafpoRG+j2rM73la/S8THNg97cVjIb2JfcZ6mO1OwCp2DElkvj8PdfrhJ3qtjwtY2pCvw95G9MLaiN1yAx4GXFfYRtr3sxO8h+zJD3WcPW4Db9L47TBqn46NBOhqMjybjcXY4yg5H/PJF94QkF9uu0xXz/eTaScH+zfK0u6SfxS6iN5P0TTY+zg5HX3kcNfq9sUf+u1dPD3TWr3RKSw/NvsWH8N1r7XEA/x5SvB0Px+P9C/FvUFKEu4qhtSZYbYdO1hvUSf92UKDVAyduBqU1TT1oJ/ftKrMjUqGfGbGRiRiDhKsRbhDcMrwbmDlaK8WOEN561NEmNYwbXPLsAfcJn4NqdmBQre+p9OF0Oq3HvsZD8PaVLhMerfKM18b5sNpQ0+YHUMuDXloc2vlm3Wms4hmfeV9nBwej8fEwHabDUfY6fZ3uFecHk4NiUTv4o3HiU7cS/PlTZidatQoTmkor/B6cPzk7pZjRuoglHY6GKQlTqBWEqaY93Ps21ruxrLoJ6RfYcNum5vHWH9QKpKbEhJNdtRy44FDLcPTdnj8jkmQXfLWagsNzq9Zr+jnuuMQNIR1MVW/LfTCFL99q7w0hFsHeKr5hfuDgHKwklDy7oHlmhiDQ9ur0bQQ5mJCDTndvKu6K7iTPsfaPyvZr7ezj5wlP+LTdiSsTmoeFBd0usCCc9D8IH/vHKv624gp02UBJstEmff4B2E4I4Q==
+sidebar_class_name: "post api-method"
+info_path: docs/api/fastapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new session"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/sessions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new session bettween a user and an agent.
+
+The session will be associated with the provided agent and optionally with a user.
+If no user is provided, a guest user will be created.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"allow_greeting","in":"query","required":false,"schema":{"type":"boolean","description":"Indicates if the agent is permitted to send an initial greeting","default":false,"title":"Allow Greeting"},"description":"Indicates if the agent is permitted to send an initial greeting"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"properties":{"agent_id":{"type":"string","maxLength":10,"minLength":10,"title":"Agent Id","description":"Unique identifier of the agent associated with the session.","examples":["vUfk4PgjTm"]},"id":{"anyOf":[{"type":"string","maxLength":10,"minLength":10,"description":"Unique identifier of the session","examples":["zv3h4j5Fjv"]},{"type":"null"}],"title":"Id"},"title":{"anyOf":[{"type":"string","maxLength":200,"description":"Descriptive title of the session","examples":["A tale about a friendly dragon and a lost princess"]},{"type":"null"}],"title":"Title"}},"additionalProperties":false,"type":"object","required":["agent_id"],"title":"SessionCreationParams","example":{"agent_id":"vUfk4PgjTm","title":"What's the weather in SF?"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Session created successfully, Returns the created session along with its generated ID.","content":{"application/json":{"schema":{"properties":{"id":{"type":"string","maxLength":10,"minLength":10,"title":"Id","description":"Unique identifier of the session","examples":["zv3h4j5Fjv"]},"agent_id":{"type":"string","maxLength":10,"minLength":10,"title":"Agent Id","description":"Unique identifier of the agent associated with the session.","examples":["vUfk4PgjTm"]},"user_id":{"type":"string","maxLength":10,"minLength":10,"title":"User Id","description":"Unique identifier of the user associated with the session.","examples":["v9pg5Zv3h4"]},"title":{"anyOf":[{"type":"string","maxLength":200,"description":"Descriptive title of the session","examples":["A tale about a friendly dragon and a lost princess"]},{"type":"null"}],"title":"Title"},"consumption_offsets":{"properties":{"client":{"anyOf":[{"type":"integer","minimum":0,"description":"The most recent event offset processed by the client","examples":[37,100]},{"type":"null"}],"title":"Client"}},"additionalProperties":false,"type":"object","title":"ConsumptionOffsets","description":"Tracks the state of message consumption.","example":{"client":37}},"created_at":{"type":"string","format":"date-time","title":"Created At","description":"When the session was created","examples":["2025-01-25T22:41:41"]}},"additionalProperties":false,"type":"object","required":["id","agent_id","user_id","consumption_offsets","created_at"],"title":"Session","example":{"agent_id":"vUfk4PgjTm","created_at":"2025-01-29T09:27:41Z","id":"zv3h4j5Fjv","title":"The weather in SF","user_id":"v9pg5Zv3h4"}},"example":{"id":"zv3h4j5Fjv","agent_id":"vUfk4PgjTm","user_id":"v9pg5Zv3h4","title":"The weather in SF","created_at":"2025-01-29T09:27:41Z"}}}},"422":{"description":"Validation error in request parameters"}}}
+>
+  
+</StatusCodes>
+
+
+      
