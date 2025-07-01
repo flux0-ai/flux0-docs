@@ -1,7 +1,7 @@
-import type * as Preset from '@docusaurus/preset-classic';
-import type { Config } from '@docusaurus/types';
+import type * as Preset from "@docusaurus/preset-classic";
+import type { Config } from "@docusaurus/types";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
-import { themes as prismThemes } from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 const transformer = require("@crossid/docusaurus-remote-content").transformer;
 
 const regexMdLinks = /\[([^\[]+)\](\(.*?\))/gm;
@@ -25,10 +25,7 @@ function createRemoteContentTransformer(basePath) {
         let normalized = link.startsWith("./") ? link.slice(2) : link;
         normalized = normalized.startsWith("/") ? normalized.slice(1) : normalized;
 
-        td = td.replace(
-          match[0],
-          `[${linkText}](${basePath}/${normalized})`
-        );
+        td = td.replace(match[0], `[${linkText}](${basePath}/${normalized})`);
       }
     }
 
@@ -39,72 +36,70 @@ function createRemoteContentTransformer(basePath) {
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Flux0',
+  title: "Flux0",
   tagline:
-		"A powerful framework for deploying AI agents with multi-agent support, session management, event streaming, and LLM-agnostic integration.",
-  favicon: 'img/favicon.ico',
+    "A powerful framework for deploying AI agents with multi-agent support, session management, event streaming, and LLM-agnostic integration.",
+  favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
     experimental_faster: {
       rspackBundler: true,
-      rspackPersistentCache: true
-    }
+      rspackPersistentCache: true,
+    },
   },
 
   // Set the production url of your site here
-  url: 'https://flux0.netlify.app',
+  url: "https://flux0.netlify.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'flux0-ai', // Usually your GitHub org/user name.
-  projectName: 'flux0', // Usually your repo name.
-  deploymentBranch: 'gh-pages', // The branch that GitHub pages will deploy from.
+  organizationName: "flux0-ai", // Usually your GitHub org/user name.
+  projectName: "flux0", // Usually your repo name.
+  deploymentBranch: "gh-pages", // The branch that GitHub pages will deploy from.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -112,38 +107,38 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "Flux0",
       logo: {
         alt: "Flux0 Site Logo",
-        src: 'img/logo.svg',
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'docSidebar',
+          type: "docSidebar",
           sidebarId: "learnSidebar",
-          position: 'left',
-          label: 'Learn',
+          position: "left",
+          label: "Learn",
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: 'https://github.com/orgs/flux0-ai/repositories',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/orgs/flux0-ai/repositories",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-							label: "Learn",
-							to: "/docs/quickstart/intro",
-						},
+              label: "Learn",
+              to: "/docs/quickstart/intro",
+            },
           ],
         },
         // {
@@ -164,15 +159,15 @@ const config: Config = {
         //   ],
         // },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: "Blog",
+              to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/orgs/flux0-ai/repositories',
+              label: "GitHub",
+              href: "https://github.com/orgs/flux0-ai/repositories",
             },
           ],
         },
@@ -196,7 +191,7 @@ const config: Config = {
             file: "examples/static.md",
             url: "https://raw.githubusercontent.com/flux0-ai/flux0/refs/heads/develop/examples/static/README.md",
             header: `:::note
-This content is from the README file of https://github.com/flux0-ai/flux0/blob/develop/examples/static.
+This content is from the README file of https://github.com/flux0-ai/flux0/tree/develop/examples/static.
 The source code for this example can be found [here](https://github.com/flux0-ai/flux0/blob/develop/examples/static/static_agent.py)
 :::`,
             meta: {
@@ -204,31 +199,42 @@ The source code for this example can be found [here](https://github.com/flux0-ai
               sidebar_label: "Static",
               hide_title: true,
             },
-            transform: createRemoteContentTransformer(
-              "https://github.com/flux0-ai/flux0/tree/develop"
-            ),
+            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
           },
-        ]
-      }
+          {
+            file: "examples/langchain_simple.md",
+            url: "https://raw.githubusercontent.com/flux0-ai/flux0/refs/heads/develop/examples/langchain_simple/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/flux0-ai/flux0/tree/develop/examples/langchain_simple.
+The source code for this example can be found [here](https://github.com/flux0-ai/flux0/tree/develop/examples/langchain_simple/agent.py)
+:::`,
+            meta: {
+              id: "langchain_simple",
+              sidebar_label: "Langchain - Simple",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
+          },
+        ],
+      },
     ],
     [
-      'docusaurus-plugin-openapi-docs',
+      "docusaurus-plugin-openapi-docs",
       {
         id: "api", // plugin id
         docsPluginId: "classic", // configured for preset-classic
         config: {
           flux0: {
-            specPath:
-							"https://raw.githubusercontent.com/flux0-ai/flux0-api-spec/refs/heads/main/openapi.json",
-							// "http://localhost:8080/openapi.json",
-						outputDir: "docs/api",
+            specPath: "https://raw.githubusercontent.com/flux0-ai/flux0-api-spec/refs/heads/main/openapi.json",
+            // "http://localhost:8080/openapi.json",
+            outputDir: "docs/api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
-        }
+        },
       },
-    ]
+    ],
   ],
   themes: ["docusaurus-theme-openapi-docs"], // export theme components
 };
