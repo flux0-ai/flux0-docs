@@ -178,6 +178,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // github codeblock theme configuration
+    codeblock: {
+      showGithubLink: true,
+      githubLinkLabel: "View on GitHub",
+      showRunmeLink: false,
+      runmeLinkLabel: "Checkout via Runme",
+    },
   } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -215,6 +222,20 @@ The source code for this example can be found [here](https://github.com/flux0-ai
             },
             transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
           },
+          {
+            file: "examples/openai_simple.md",
+            url: "https://raw.githubusercontent.com/flux0-ai/flux0/refs/heads/develop/examples/openai_simple/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/flux0-ai/flux0/tree/develop/examples/openai_simple.
+The source code for this example can be found [here](https://github.com/flux0-ai/flux0/tree/develop/examples/openai_simple/agent.py)
+:::`,
+            meta: {
+              id: "openai_simple",
+              sidebar_label: "OpenAI - Simple",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
+          },
         ],
       },
     ],
@@ -236,7 +257,7 @@ The source code for this example can be found [here](https://github.com/flux0-ai
       },
     ],
   ],
-  themes: ["docusaurus-theme-openapi-docs"], // export theme components
+  themes: ["docusaurus-theme-openapi-docs", "docusaurus-theme-github-codeblock"], // export theme components
 };
 
 export default config;
