@@ -39,11 +39,28 @@ pip install flux0_ai
 flux0-server
 ```
 
-By default, the server will be available at [http://localhost:8080](http://localhost:8080).
+The server can be accessed at [http://localhost:8080](http://localhost:8080).
+
+API docs available at [http://localhost:8080/docs](http://localhost:8080/docs).
 
 ## 🐳 Option 2: Run via Docker
 
-TODO
+Flux0 can run in a containerized environment:
+
+```
+# this assumes your agent code is within the my_agent module.
+docker run -e FLUX0_MODULES=my_agent -p 8080:8080 -v $PWD/my_agent:/app/my_agent flux0ai/flux0-ai:beta
+```
+
+To use the flux0 CLI, such as creating an agent, run:
+
+```
+docker run --rm --network host flux0ai/flux0-ai:beta flux0 agents create --name "My Agent" --type my_agent
+```
+
+The server can be accessed at [http://localhost:8080](http://localhost:8080).
+
+API docs available at [http://localhost:8080/docs](http://localhost:8080/docs).
 
 ## ✅ Next Steps
 
