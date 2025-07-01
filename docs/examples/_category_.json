@@ -1,4 +1,8 @@
 {
   "label": "Examples",
+  "link": {
+    "type": "generated-index",
+    "description": "Flux0 examples"
+  },
   "position": 10
 }
