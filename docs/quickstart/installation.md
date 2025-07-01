@@ -7,21 +7,21 @@ description: Learn how to install Flux0 via PyPI or Docker.
 
 # 🚀 Setup
 
-Flux0 can be installed in two primary ways: via **PyPI** using a package manager such `pip` or via **Docker**. Choose the method that best fits your environment and workflow.
+Flux0 is ready to run in just a few steps. Whether you prefer installing via **PyPI** or running in **Docker**, we’ve got you covered.
+
+Choose your preferred setup method:
 
 ---
 
 ## 📦 Option 1: Install via PyPI
 
-If you want to run Flux0 locally on your machine:
+Perfect if you want to develop and run Flux0 directly on your machine.
 
 ### 1. Prerequisites
 
 - Python 3.13+
 
-### 2. Install Flux0
-
-Create a new project or navigate to your existing Python workspace:
+### 2. Installation Steps
 
 ```bash
 mkdir ~/tmp/myflux0 && cd ~/tmp/myflux0
@@ -33,36 +33,52 @@ pip install git+https://github.com/flux0-ai/flux0-client-python
 pip install flux0_ai
 ```
 
-### 3. Start the Server
+### 🚀 Launch the Server
 
-```
+```bash
 flux0-server
 ```
 
-The server can be accessed at [http://localhost:8080](http://localhost:8080).
+:::tip
+To change the port, set the `FLUX0_PORT` environment variable.
+:::
 
-API docs available at [http://localhost:8080/docs](http://localhost:8080/docs).
+* 🌐 Open in browser: [http://localhost:8080](http://localhost:8080)
+* 📚 Explore the API: [http://localhost:8080/docs](http://localhost:8080/docs)
 
-## 🐳 Option 2: Run via Docker
 
-Flux0 can run in a containerized environment:
+## 🐳 Option 2: Run via Docker (Containerized)
 
+Ideal for isolated or containerized environments.
+
+### 🧱 Run the Server
+
+```bash
+docker run \
+  -e FLUX0_MODULES=my_agent \
+  -p 8080:8080 \
+  -v $PWD/my_agent:/app/my_agent \
+  flux0ai/flux0-ai:beta
 ```
-# this assumes your agent code is within the my_agent module.
-docker run -e FLUX0_MODULES=my_agent -p 8080:8080 -v $PWD/my_agent:/app/my_agent flux0ai/flux0-ai:beta
+
+> 💡 Replace `my_agent` with the name of your agent module directory.
+
+### 🧪 Try the CLI
+
+```bash
+docker run --rm --network host flux0ai/flux0-ai:beta \
+  flux0 agents create --name "My Agent" --type my_agent
 ```
 
-To use the flux0 CLI, such as creating an agent, run:
+* 🌐 Server: [http://localhost:8080](http://localhost:8080)
+* 📚 API Docs: [http://localhost:8080/docs](http://localhost:8080/docs)
 
-```
-docker run --rm --network host flux0ai/flux0-ai:beta flux0 agents create --name "My Agent" --type my_agent
-```
 
-The server can be accessed at [http://localhost:8080](http://localhost:8080).
+## ✅ What’s Next?
 
-API docs available at [http://localhost:8080/docs](http://localhost:8080/docs).
+You're up and running — now it's time to put Flux0 to work!
 
-## ✅ Next Steps
-
-- Visit [http://localhost:8080](http://localhost:8080) for a chat.
-- Create your [first agent](./first-agent).
+* 🧠 [Create your first agent](./first-agent): Learn how to define your first AI agent and bring it to life.
+* 🗂 Explore the API: [http://localhost:8080/docs](http://localhost:8080/docs)
+* 💬 Start chatting with your agent at [http://localhost:8080/chat](http://localhost:8080/chat)
+* 🧪 [Examples](../category/examples): Browse ready-made agent examples built with different frameworks.
