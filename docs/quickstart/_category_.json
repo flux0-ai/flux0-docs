@@ -1,8 +1,4 @@
 {
   "label": "Quickstart",
-  "position": 1,
-  "link": {
-    "type": "doc",
-    "id": "quickstart/intro"
-  }
+  "position": 1
 }

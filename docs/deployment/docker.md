@@ -1,25 +1,28 @@
 ---
-sidebar_position: 3
-id: first-agent
-title: First Agent
-description: Learn how to build your first agent using Flux0.
+sidebar_position: 5
+id: docker
+title: Docker
+description: Learn how to deploy your Flux0 agent using Docker.
 ---
 
-Welcome to your first step with Flux0 agents!
-This guide will walk you through creating and running a minimal agent in your local environment using **LangChain** and **OpenAI**.
+Run your Flux0 agent in a portable, self-contained Docker environment—ideal for both local testing and production.
 
-Flux0 doesn’t lock you into any specific AI framework — while it natively supports **LangChain**, **LangGraph**, and **PydanticAI**, you’re free to use **any Pythonic LLM framework** of your choice.
-
-> 💡 This follows the [PyPI installation instructions](installation#-option-1-install-via-pypi) guide. For container deployment see [Docker deployment](/docs/deployment/docker).
+> 💡 This follows the [Docker installation instructions](../quickstart/installation#-option-2-run-via-docker-containerized) guide.
 
 
 ## 📥 Step1: Install Dependencies
 
-Before writing code, install the required libraries:
+Before writing code, define the required libraries for your agent:
 
-```bash
-cd <my_flux0>
-pip install langchain "langchain[openai]"
+```Dockerfile {4-5}
+# Inherit from the flux0 image
+FROM flux0ai/flux0:beta AS base
+
+# Install extra dependencies based on your agent's requirements
+RUN pip install langchain "langchain[openai]"
+
+# Copy your agent code into the container
+COPY ./modules /app/modules
 ```
 
 ## 🧠 Step2: Define Your Agent Logic
@@ -31,9 +34,9 @@ You can annotate your runner using `@agent_runner`, which registers it with Flux
 :::tip
 You can download the files via curl (or copy & paste the code below)
 ```bash
-mkdir my_agent
-curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain_simple/agent.py -o my_agent/agent.py
-curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain_simple/__init__.py -o my_agent/__init__.py
+mkdir -p modules/my_agent
+curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain_simple/agent.py -o modules/my_agent/agent.py
+curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain_simple/__init__.py -o modules/my_agent/__init__.py
 ```
 :::
 
@@ -41,7 +44,7 @@ curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain
 https://github.com/flux0-ai/flux0/blob/develop/examples/langchain_simple/agent.py
 ```
 
-## 📦 Step 3: Register the Module
+## 📦 Register the Module
 
 Your runner must be registered in a Python module so Flux0 can load it.
 
@@ -53,10 +56,10 @@ https://github.com/flux0-ai/flux0/blob/develop/examples/langchain_simple/__init_
 
 ## 🚀 Step 4: Run the Server
 
-Start the Flux0 server locally:
+Start the Flux0 server:
 
 ```bash
-PYTHONPATH=. FLUX0_MODULES=my_agent OPENAI_API_KEY=<your_key> flux0-server
+docker build -t my-flux0 . && docker run --rm -e FLUX0_MODULES=my_agent -e OPENAI_API_KEY=<key> -p 8080:8080 my-flux0
 ```
 
 Your agent will now be available through the API and ready to receive interactions.
@@ -66,7 +69,8 @@ Your agent will now be available through the API and ready to receive interactio
 Once your runner is defined and your module is registered, you can create the agent entry in the database:
 
 ```bash
-flux0 agents create --name "Translation Agent" --type langchain_simple
+docker run --rm --network host my-flux0 \
+  flux0 agents create --name "Translation Agent" --type langchain_simple
 ```
 
 This defines metadata about the agent and links it to the runner by name. The `--type` refers to the name you gave in `@agent_runner("...")`.
@@ -74,6 +78,7 @@ This defines metadata about the agent and links it to the runner by name. The `-
 ## 💬 Step 6: Talk to Your Agent
 
 Start chatting with your agent at [http://localhost:8080/chat](http://localhost:8080/chat)
+
 
 ## 🔍 What’s Next?
 

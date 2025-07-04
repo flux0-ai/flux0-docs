@@ -137,7 +137,7 @@ const config: Config = {
           items: [
             {
               label: "Learn",
-              to: "/docs/quickstart/intro",
+              to: "/docs/quickstart/introduction",
             },
           ],
         },
