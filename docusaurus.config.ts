@@ -236,6 +236,35 @@ The source code for this example can be found [here](https://github.com/flux0-ai
             },
             transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
           },
+
+          // clients
+          //
+          {
+            file: "clients/react-vite-minimal.md",
+            url: "https://raw.githubusercontent.com/flux0-ai/flux0-react-vite-minimal-demo/refs/heads/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/flux0-ai/flux0-react-vite-minimal-demo.
+:::`,
+            meta: {
+              id: "react-vite-minimal",
+              sidebar_label: "React Vite Minimal",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0-react-vite-minimal-demo/tree/main"),
+          },
+          {
+            file: "clients/react-vite-tanstack.md",
+            url: "https://raw.githubusercontent.com/flux0-ai/flux0-react-vite-tanstack-demo/refs/heads/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/flux0-ai/flux0-react-vite-tanstack-demo.
+:::`,
+            meta: {
+              id: "react-vite-tanstack",
+              sidebar_label: "React Vite Tanstack Minimal",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0-react-vite-tanstack-demo/tree/main"),
+          },
         ],
       },
     ],
