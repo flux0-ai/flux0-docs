@@ -14,7 +14,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "openapi-gen": "docusaurus gen-api-docs all",
+    "openapi-gen": "find ./docs/api -type f ! -name '_category_.json' -delete && docusaurus gen-api-docs all",
     "fetch-remote-docs": "docusaurus fetch-remote-docs",
     "clean-remote-docs": "docusaurus clean-remote-docs"
   },

@@ -4,7 +4,7 @@ const sidebar: SidebarsConfig = {
   apisidebar: [
     {
       type: "doc",
-      id: "api/fastapi",
+      id: "api/flux-0-api",
     },
     {
       type: "category",
@@ -37,7 +37,7 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "api/create-session",
-          label: "Create a new session",
+          label: "Create Session",
           className: "api-method post",
         },
         {
@@ -54,8 +54,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/create-session-event",
-          label: "Create and stream session events",
+          id: "api/create-event-and-stream",
+          label: "Create Event and Stream",
           className: "api-method post",
         },
         {

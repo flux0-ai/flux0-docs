@@ -111,9 +111,9 @@ Content-Type: application/json
 ## Typical flow
 
 1. **Create (record)**: [POST /api/sessions](/docs/api/create-session) with `mode="record"` → note `metadata.recording.recording_id` in the session.
-2. **Stream (record)** as usual: [POST /sessions/:session_id/events/stream](/docs/api/create-session-event).
+2. **Stream (record)** as usual: [POST /sessions/:session_id/events/stream](/docs/api/create-event-and-stream).
 3. **Create (replay)**: [POST /api/sessions](/docs/api/create-session) with `mode="replay"` and `metadata.replay.recording_id`.
-4. **Stream (replay)**: [POST /sessions/:session_id/events/stream](/docs/api/create-session-event) to receive recorded events.
+4. **Stream (replay)**: [POST /sessions/:session_id/events/stream](/docs/api/create-event-and-stream) to receive recorded events.
 5. **Iterate**: When replay stops at the next user anchor, repeat step 4 to continue the next turn or trigger another run.
 
 ---
