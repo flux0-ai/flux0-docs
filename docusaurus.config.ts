@@ -2,6 +2,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 import { themes as prismThemes } from "prism-react-renderer";
+// import tailwindLoader from './plugins/tailwind-loader.mjs';
 const transformer = require("@crossid/docusaurus-remote-content").transformer;
 
 const regexMdLinks = /\[([^\[]+)\](\(.*?\))/gm;
@@ -188,6 +189,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
+    "./plugins/tailwind-loader.mjs",
     [
       "@crossid/docusaurus-remote-content",
       {
