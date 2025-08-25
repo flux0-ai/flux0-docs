@@ -2,7 +2,6 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 import { themes as prismThemes } from "prism-react-renderer";
-// import tailwindLoader from './plugins/tailwind-loader.mjs';
 const transformer = require("@crossid/docusaurus-remote-content").transformer;
 
 const regexMdLinks = /\[([^\[]+)\](\(.*?\))/gm;
@@ -24,7 +23,9 @@ function createRemoteContentTransformer(basePath) {
       if (!link.startsWith("http")) {
         // Normalize path: remove leading ./ but preserve other relative paths
         let normalized = link.startsWith("./") ? link.slice(2) : link;
-        normalized = normalized.startsWith("/") ? normalized.slice(1) : normalized;
+        normalized = normalized.startsWith("/")
+          ? normalized.slice(1)
+          : normalized;
 
         td = td.replace(match[0], `[${linkText}](${basePath}/${normalized})`);
       }
@@ -40,7 +41,7 @@ const config: Config = {
   title: "Flux0",
   tagline:
     "A powerful framework for deploying AI agents with multi-agent support, session management, event streaming, and LLM-agnostic integration.",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo-dark.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -83,7 +84,8 @@ const config: Config = {
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl:
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
@@ -93,7 +95,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl:
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -108,12 +111,15 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
+    hideOnScroll: true,
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "Flux0",
       logo: {
-        alt: "Flux0 Site Logo",
-        src: "img/logo.svg",
+        alt: "Flux0 Logo",
+        src: "img/logo-light.svg",
+        srcDark: "img/logo-dark.svg",
+        className: 'flux0-nav-logo',
       },
       items: [
         {
@@ -125,21 +131,39 @@ const config: Config = {
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/orgs/flux0-ai/repositories",
-          label: "GitHub",
           position: "right",
+          className: 'header-github-link'
         },
       ],
     },
+    // announcementBar: {
+    //   id: "announcement-bar",
+    //   content:
+    //     'Record & Replay sessions <a target="_blank" rel="noopener noreferrer" href="foo">Get Started Now</a>',
+    // },
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     footer: {
-      style: "dark",
+      // style: "dark",
       links: [
         {
           title: "Docs",
           items: [
             {
-              label: "Learn",
+              label: "Quickstart",
               to: "/docs/quickstart/introduction",
             },
+            {
+              label: "Examples",
+              to: "/docs/category/examples",
+            },
+            {
+              label: "API Reference",
+              to: "/docs/api/flux-0-api",
+            }
           ],
         },
         // {
@@ -173,7 +197,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Flux0.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -208,7 +232,9 @@ The source code for this example can be found [here](https://github.com/flux0-ai
               sidebar_label: "Static",
               hide_title: true,
             },
-            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
+            transform: createRemoteContentTransformer(
+              "https://github.com/flux0-ai/flux0/tree/develop"
+            ),
           },
           {
             file: "examples/langchain_simple.md",
@@ -222,7 +248,9 @@ The source code for this example can be found [here](https://github.com/flux0-ai
               sidebar_label: "Langchain - Simple",
               hide_title: true,
             },
-            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
+            transform: createRemoteContentTransformer(
+              "https://github.com/flux0-ai/flux0/tree/develop"
+            ),
           },
           {
             file: "examples/openai_simple.md",
@@ -236,7 +264,9 @@ The source code for this example can be found [here](https://github.com/flux0-ai
               sidebar_label: "OpenAI - Simple",
               hide_title: true,
             },
-            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0/tree/develop"),
+            transform: createRemoteContentTransformer(
+              "https://github.com/flux0-ai/flux0/tree/develop"
+            ),
           },
 
           // clients
@@ -252,7 +282,9 @@ This content is from the README file of https://github.com/flux0-ai/flux0-react-
               sidebar_label: "React Vite Minimal",
               hide_title: true,
             },
-            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0-react-vite-minimal-demo/tree/main"),
+            transform: createRemoteContentTransformer(
+              "https://github.com/flux0-ai/flux0-react-vite-minimal-demo/tree/main"
+            ),
           },
           {
             file: "clients/react-vite-tanstack.md",
@@ -265,7 +297,9 @@ This content is from the README file of https://github.com/flux0-ai/flux0-react-
               sidebar_label: "React Vite Tanstack Minimal",
               hide_title: true,
             },
-            transform: createRemoteContentTransformer("https://github.com/flux0-ai/flux0-react-vite-tanstack-demo/tree/main"),
+            transform: createRemoteContentTransformer(
+              "https://github.com/flux0-ai/flux0-react-vite-tanstack-demo/tree/main"
+            ),
           },
         ],
       },
@@ -277,7 +311,8 @@ This content is from the README file of https://github.com/flux0-ai/flux0-react-
         docsPluginId: "classic", // configured for preset-classic
         config: {
           flux0: {
-            specPath: "https://raw.githubusercontent.com/flux0-ai/flux0-api-spec/refs/heads/main/openapi.json",
+            specPath:
+              "https://raw.githubusercontent.com/flux0-ai/flux0-api-spec/refs/heads/main/openapi.json",
             // "http://localhost:8080/openapi.json",
             outputDir: "docs/api",
             sidebarOptions: {
@@ -288,7 +323,10 @@ This content is from the README file of https://github.com/flux0-ai/flux0-react-
       },
     ],
   ],
-  themes: ["docusaurus-theme-openapi-docs", "docusaurus-theme-github-codeblock"], // export theme components
+  themes: [
+    "docusaurus-theme-openapi-docs",
+    "docusaurus-theme-github-codeblock",
+  ], // export theme components
 };
 
 export default config;

@@ -1,44 +1,17 @@
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
-import clsx from 'clsx';
 import type { ReactNode } from 'react';
 
-import styles from './index.module.css';
+import Home from '../components/home';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/quickstart/introduction">
-            Quick Start - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-export default function Home(): ReactNode {
+export default function HomePage(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      title={`${siteConfig.title} - A powerful framework for deploying AI agents`}
+      description="The Flux0 API enables developers to create, manage and deploy AI agents, interact with them via sessions, and handle event streaming using JSONPatch (RFC 6902). It is designed to support multi-agent workflows, facilitate LLM-agnostic integrations, and provide structured interactions with AI-powered assistants. The API is ideal for orchestrating intelligent assistants, tracking interactions, and ensuring dynamic and responsive AI applications.">
+
+      <Home />
     </Layout>
   );
 }

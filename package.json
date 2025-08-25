@@ -22,12 +22,17 @@
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.0.0",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "^4.4.0",
     "docusaurus-theme-openapi-docs": "^4.4.0",
+    "motion": "^12.23.12",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.1",
+    "tw-animate-css": "^1.3.7"
   },
   "devDependencies": {
     "@crossid/docusaurus-remote-content": "^0.1.5",

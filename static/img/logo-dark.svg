@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer "0" shape using a rounded rectangle -->
+  <rect x="50" y="60" width="100" height="80" rx="40" ry="40" stroke="oklch(59.2% 0.249 0.584)" stroke-width="6" fill="none"/>
+
+  <!-- Improved, smoother streaming curve -->
+  <path d="M50,100 C70,50 130,150 150,100" stroke="oklch(59.2% 0.249 0.584)" stroke-width="3" fill="none"/>
+
+  <!-- Dots on the curve -->
+  <circle cx="70" cy="85" r="4" fill="#000"/>
+  <circle cx="100" cy="100" r="4" fill="#000"/>
+  <circle cx="130" cy="114" r="4" fill="#000"/>
+</svg>
