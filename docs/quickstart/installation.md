@@ -41,8 +41,8 @@ flux0-server
 To change the port, set the `FLUX0_PORT` environment variable.
 :::
 
-* 🌐 Open in browser: [http://localhost:8080](http://localhost:8080)
-* 📚 Explore the API: [http://localhost:8080/docs](http://localhost:8080/docs)
+- 🌐 Open in browser: [http://localhost:8080](http://localhost:8080)
+- 📚 Explore the API: [http://localhost:8080/docs](http://localhost:8080/docs)
 
 Ready to build [your first agent](./first-agent)?
 
@@ -63,6 +63,7 @@ COPY ./modules /app/modules
 ```
 
 For now lets create an empty directory for your future agent code
+
 ```bash
 mkdir modules
 ```
@@ -81,8 +82,8 @@ docker run \
   my-flux0-agent
 ```
 
-* 🌐 Server: [http://localhost:8080](http://localhost:8080)
-* 📚 API Docs: [http://localhost:8080/docs](http://localhost:8080/docs)
+- 🌐 Server: [http://localhost:8080](http://localhost:8080)
+- 📚 API Docs: [http://localhost:8080/docs](http://localhost:8080/docs)
 
 Ready to build [your first agent in docker](../deployment/docker)?
 
@@ -90,5 +91,5 @@ Ready to build [your first agent in docker](../deployment/docker)?
 
 You're up and running — now it's time to put Flux0 to work!
 
-* 🧠 [Create your first agent](./first-agent): Learn how to define your first AI agent and bring it to life.
-* 🧪 [Examples](../category/examples): Browse ready-made agent examples built with different frameworks.
+- 🧠 [Create your first agent](./first-agent): Learn how to define your first AI agent and bring it to life.
+- 🧪 [Examples](../category/agents-examples): Browse ready-made agent examples built with different frameworks.

@@ -157,8 +157,12 @@ const config: Config = {
               to: "/docs/quickstart/introduction",
             },
             {
-              label: "Examples",
-              to: "/docs/category/examples",
+              label: "Agents Examples",
+              to: "/docs/category/agents-examples",
+            },
+            {
+              label: "Clients Examples",
+              to: "/docs/category/clients-examples",
             },
             {
               label: "API Reference",
@@ -221,7 +225,7 @@ const config: Config = {
         cleanup: true,
         contents: [
           {
-            file: "examples/static.md",
+            file: "agents-examples/static.md",
             url: "https://raw.githubusercontent.com/flux0-ai/flux0/refs/heads/develop/examples/static/README.md",
             header: `:::note
 This content is from the README file of https://github.com/flux0-ai/flux0/tree/develop/examples/static.
@@ -237,7 +241,7 @@ The source code for this example can be found [here](https://github.com/flux0-ai
             ),
           },
           {
-            file: "examples/langchain_simple.md",
+            file: "agents-examples/langchain_simple.md",
             url: "https://raw.githubusercontent.com/flux0-ai/flux0/refs/heads/develop/examples/langchain_simple/README.md",
             header: `:::note
 This content is from the README file of https://github.com/flux0-ai/flux0/tree/develop/examples/langchain_simple.
@@ -253,7 +257,7 @@ The source code for this example can be found [here](https://github.com/flux0-ai
             ),
           },
           {
-            file: "examples/openai_simple.md",
+            file: "agents-examples/openai_simple.md",
             url: "https://raw.githubusercontent.com/flux0-ai/flux0/refs/heads/develop/examples/openai_simple/README.md",
             header: `:::note
 This content is from the README file of https://github.com/flux0-ai/flux0/tree/develop/examples/openai_simple.
@@ -272,7 +276,7 @@ The source code for this example can be found [here](https://github.com/flux0-ai
           // clients
           //
           {
-            file: "clients/react-vite-minimal.md",
+            file: "clients-examples/react-vite-minimal.md",
             url: "https://raw.githubusercontent.com/flux0-ai/flux0-react-vite-minimal-demo/refs/heads/main/README.md",
             header: `:::note
 This content is from the README file of https://github.com/flux0-ai/flux0-react-vite-minimal-demo.
@@ -287,7 +291,7 @@ This content is from the README file of https://github.com/flux0-ai/flux0-react-
             ),
           },
           {
-            file: "clients/react-vite-tanstack.md",
+            file: "clients-examples/react-vite-tanstack.md",
             url: "https://raw.githubusercontent.com/flux0-ai/flux0-react-vite-tanstack-demo/refs/heads/main/README.md",
             header: `:::note
 This content is from the README file of https://github.com/flux0-ai/flux0-react-vite-tanstack-demo.
@@ -299,6 +303,21 @@ This content is from the README file of https://github.com/flux0-ai/flux0-react-
             },
             transform: createRemoteContentTransformer(
               "https://github.com/flux0-ai/flux0-react-vite-tanstack-demo/tree/main"
+            ),
+          },
+          {
+            file: "clients-examples/flux0-nextjs-demo.md",
+            url: "https://raw.githubusercontent.com/flux0-ai/flux0-nextjs-demo/refs/heads/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/flux0-ai/flux0-nextjs-demo.
+:::`,
+            meta: {
+              id: "nextjs",
+              sidebar_label: "Next.js Demo",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/flux0-ai/flux0-nextjs-demo/tree/main"
             ),
           },
         ],

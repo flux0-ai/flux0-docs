@@ -7,8 +7,8 @@
 # Generated files
 .docusaurus
 .cache-loader
-docs/examples/*.md
-
+docs/agents-examples/*.md
+docs/clients-examples/*.md
 # Misc
 .DS_Store
 .env.local

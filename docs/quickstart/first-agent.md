@@ -12,7 +12,6 @@ Flux0 doesn’t lock you into any specific AI framework — while it natively su
 
 > 💡 This follows the [PyPI installation instructions](installation#-option-1-install-via-pypi) guide. For container deployment see [Docker deployment](/docs/deployment/docker).
 
-
 ## 📥 Step1: Install Dependencies
 
 Before writing code, install the required libraries:
@@ -30,11 +29,13 @@ You can annotate your runner using `@agent_runner`, which registers it with Flux
 
 :::tip
 You can download the files via curl (or copy & paste the code below)
+
 ```bash
 mkdir my_agent
 curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain_simple/agent.py -o my_agent/agent.py
 curl https://raw.githubusercontent.com/flux0-ai/flux0/develop/examples/langchain_simple/__init__.py -o my_agent/__init__.py
 ```
+
 :::
 
 ```js reference title="<your_flux0>/my_agent/agent.py"
@@ -77,5 +78,5 @@ Start chatting with your agent at [http://localhost:8080/chat](http://localhost:
 
 ## 🔍 What’s Next?
 
-- Ready to go beyond Hello World? Jump into the [Examples](/docs/category/examples) to explore powerful agent use cases!
+- Ready to go beyond Hello World? Jump into the [Examples](/docs/category/agents-examples) to explore powerful agent use cases!
 - Want to build your own UI to interact with your agent? see [Flux0-React](https://github.com/flux0-ai/flux0-react).

@@ -1,8 +1,8 @@
 {
-  "label": "Clients",
+  "label": "Clients Examples",
   "link": {
     "type": "generated-index",
     "description": "Flux0 clients"
   },
-  "position": 9
+  "position": 10
 }

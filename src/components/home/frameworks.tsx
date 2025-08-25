@@ -2,10 +2,10 @@ import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 
 // Logo metadata with direct links.
 const logos = [
-  { alt: 'LangChain', src: 'img/frameworks/langchain.svg', width: 158, href: 'docs/examples/langchain_simple' },
+  { alt: 'LangChain', src: 'img/frameworks/langchain.svg', width: 158, href: 'docs/agents-examples/langchain_simple' },
   { alt: 'LangGraph', src: 'img/frameworks/langgraph.svg', width: 158, href: 'https://langchain-ai.github.io/langgraph' },
   { alt: 'PydanticAI', src: 'img/frameworks/pydanticai.svg', width: 158, href: 'https://ai.pydantic.dev/'},
-  { alt: 'OpenAI SDK', src: 'img/frameworks/openai.svg', width: 158, href: 'docs/examples/openai_simple'},
+  { alt: 'OpenAI SDK', src: 'img/frameworks/openai.svg', width: 158, href: 'docs/agents-examples/openai_simple'},
 ]
 
 export const Logos = () => {
